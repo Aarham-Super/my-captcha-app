@@ -4,30 +4,42 @@
 <meta charset="UTF-8">
 <title>Test Captcha</title>
 <style>
-  html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-  }
+ html, body {
+ height: 100%;
+ margin: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: #fff;
+ /* Add flex-direction: column; to stack items vertically for better layout with multiple elements */
+ flex-direction: column;
+ }
 
-  .captcha-container {
-    width: 300px;
-    height: 100px;
-    border: 2px solid #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+ .captcha-container {
+ width: 300px;
+ height: 100px;
+ border: 2px solid #000;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ }
+
+ /* Optional: Add some styling for your new element */
+ .creator-info {
+ margin-top: 10px; /* Adds space above the text */
+ font-size: 14px;
+ color: #555;
+ }
 </style>
 </head>
 <body>
 
 <div class="captcha-container" id="captcha-container">
-  <div class="g-recaptcha" data-sitekey="6LdWWXksAAAAAM4RVCvG8C4oKJ2c6_OYjVxYKNnH"></div>
+ <div class="g-recaptcha" data-sitekey="6LdWWXksAAAAAM4RVCvG8C4oKJ2c6_OYjVxYKNnH"></div>
 </div>
+
+<!-- Add the text here -->
+<p class="creator-info">Made by Aarham</p>
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
